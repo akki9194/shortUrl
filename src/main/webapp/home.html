@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="URL Shortner : Genrating the short url">
+    <meta name="author" content="Akash Hirke">
+    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="JS/Controller/LinkController.js"></script>
+    <script type="text/javascript" src="JS/Controller/LinkValidation.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="JS/FormValidation/css/formValidation.min.css">
+    <script src="JS/FormValidation/js/formValidation.min.js"></script>
+    <script src="JS/FormValidation/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        body {
+            background-color: lightgray;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div>
+                    <h4>URL Shortner</h4>
+                </div>
+                <hr>
+                <form id="urlForm">
+                    <div class="form-group">
+                        <label for="urlText">Put URL here</label>
+                        <textarea class="form-control" id="urlText" name="urlText" rows="4"></textarea>
+                    </div>
+
+                    <div align="center"><button type="submit" class="btn btn-success">Get Tiny Link</button></div>
+                    <br>
+                    <div class="form-group">
+                        <div id="result"> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            console.log("Ready Function :: ");
+            var val = new LinkValidtion();
+            val.activate();
+        })
+    </script>
+</body>
+</html>
